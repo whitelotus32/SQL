@@ -2,6 +2,10 @@
 
 Welcome to my portfolio! This repository contains a collection of projects and works that showcase my skills and experience as a **Data Analyst**.
 
+## 🙋‍♂️ About Me
+
+I'm a passionate data analyst who enjoys working on projects that leverage data to drive insights and help businesses make data-driven decisions. 
+
 ## 📊 Projects
 
 ### 📈 Project 1: Superstore Data Analysis
@@ -9,10 +13,6 @@ Welcome to my portfolio! This repository contains a collection of projects and w
 - **Objective:** This project aims to analyze the Superstore dataset to gain insights into product pricing, stock management, customer satisfaction, and category performance.
 - **Technologies Used:** SQL
 - **Link:** [Superstore Data Analysis](https://github.com/whitelotus32/SQL/blob/main/Superstore)
-
-## 🙋‍♂️ About Me
-
-I'm a passionate data analyst who enjoys working on projects that leverage data to drive insights and help businesses make data-driven decisions. 
 
 ## 📬 Contact
 
