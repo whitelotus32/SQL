@@ -1,0 +1,110 @@
+# Superstore Data Analysis
+
+## Objective
+This project aims to analyze the Superstore dataset to gain insights into product pricing, stock management, customer satisfaction, and category performance.
+
+## Dataset Description
+The dataset consists of information about various items sold in a superstore, including item ID, name, category, price, stock quantity, and average rating.
+
+## Key Questions
+1. Which category has the highest average price?
+2. What is the relationship between item price and average rating?
+3. Which items are running low in stock relative to their price?
+4. Are there any categories where items have a high price but low average rating?
+5. How does the average rating vary across different price ranges?
+
+## Approach
+1. Calculate the average price for each category and identify the category with the highest average price.
+2. Examine the relationship between item price and average rating by analyzing the data and visualizing any trends or patterns.
+3. Determine which items have a low stock quantity relative to their price by calculating a stock-to-price ratio.
+4. Identify categories where items have a high price but low average rating by comparing average prices and ratings within each category.
+5. Divide items into price ranges (low, medium, high) and analyze how average ratings vary across these price ranges.
+
+## Tools Used
+- SQL for querying the dataset
+
+## Outcome
+The project will provide insights into pricing strategies, inventory management, customer satisfaction levels, and category performance, enabling data-driven decision-making to optimize sales and enhance customer experience in the superstore.
+
+### This project utilizes the following Superstore data: 
+
+CREATE TABLE superstore (
+    item_id INTEGER PRIMARY KEY,
+    item_name TEXT,
+    category TEXT,
+    price DECIMAL(10, 2),
+    stock_quantity INTEGER,
+    average_rating DECIMAL(3, 2)
+);
+
+INSERT INTO superstore (item_id, item_name, category, price, stock_quantity, average_rating)
+VALUES
+    (1, 'Stainless Steel Cookware Set', 'Kitchen Supplies', 89.99, 50, 4.6),
+    (2, 'Memory Foam Mattress', 'Furnishings', 499.99, 30, 4.8),
+    (3, 'Smart LED TV', 'Electronics', 549.00, 20, 4.5),
+    (4, 'Robot Vacuum Cleaner', 'Appliances', 199.50, 40, 4.3),
+    (5, 'Wireless Bluetooth Speaker', 'Electronics', 39.99, 60, 4.2),
+    (6, 'Non-Stick Baking Set', 'Kitchen Supplies', 29.95, 80, 4.4),
+    (7, 'Cotton Bedding Set', 'Furnishings', 89.00, 25, 4.7),
+    (8, 'Smart Home Security Camera', 'Electronics', 79.95, 15, 4.1),
+    (9, 'Air Purifier', 'Appliances', 129.50, 35, 4.6),
+    (10, 'Premium Coffee Maker', 'Kitchen Supplies', 79.99, 50, 4.9),
+    (11, 'Ergonomic Office Chair', 'Furnishings', 189.00, 20, 4.5),
+    (12, 'Wireless Earbuds', 'Electronics', 49.99, 75, 4.3),
+    (13, 'Slow Cooker', 'Appliances', 49.95, 30, 4.7),
+    (14, 'Cutlery Set', 'Kitchen Supplies', 34.50, 40, 4.4),
+    (15, 'Cozy Throw Blanket', 'Furnishings', 24.99, 100, 4.2);
+
+
+## Use a SELECT statement to order the items by price.
+SELECT item_name, price
+FROM superstore
+ORDER BY price desc;
+
+## Show a statistic about the item prices.
+SELECT avg(price)
+FROM superstore;
+
+## Show a statistic about the price for items in the category of "Kitchen Supplies". 
+SELECT avg(price)
+FROM superstore
+WHERE category="Kitchen Supplies"
+
+## Which category has the highest average price?
+<!--- Calculating the average price for each category and identifying which category has the highest average price. -->
+SELECT category, AVG(price) AS average_price
+FROM superstore
+GROUP BY category
+ORDER BY average_price DESC
+LIMIT 1;
+
+## What is the relationship between item price and average rating?
+<!--- By analyzing the correlation between item price and average rating, I determined if there's any relationship between these two variables. Are higher-priced items typically rated higher? -->
+SELECT item_name, price, average_rating
+FROM superstore
+ORDER BY price;
+
+## Which items are running low in stock relative to their price?
+<!--- Calculating a ratio of stock quantity to price for each item and identifying which items have a relatively low stock quantity compared to their price. This can help in identifying potential inventory management issues. -->
+SELECT item_name, price, stock_quantity, (stock_quantity / price) AS stock_price_ratio
+FROM superstore
+ORDER BY stock_price_ratio ASC;
+
+## Are there any categories where items have a high price but low average rating?
+<!--- By examining the relationship between price and average rating within each category, I was able to identify categories where items are priced high but have relatively low average ratings. This could indicate areas for potential improvement or market shifts. -->
+SELECT category, AVG(price) AS average_price, AVG(average_rating) AS average_rating
+FROM superstore
+GROUP BY category
+HAVING average_price > 100 AND average_rating < 4.5;
+
+## How does the average rating vary across different price ranges?
+<!--- By dividing the items into price ranges (e.g., low, medium, high) and calculating the average rating within each range, I can explore how the average rating varies as prices increase or decrease. This analysis can provide insights into customer preferences at different price points. -->
+SELECT 
+    CASE 
+        WHEN price <= 50 THEN 'Low'
+        WHEN price > 50 AND price <= 100 THEN 'Medium'
+        WHEN price > 100 THEN 'High'
+    END AS price_range,
+    AVG(average_rating) AS average_rating
+FROM superstore
+GROUP BY price_range;
