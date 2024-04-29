@@ -2,9 +2,12 @@
 
 Welcome to my portfolio! This repository contains a collection of projects and works that showcase my skills and experience as a **Data Analyst**.
 
+
 ## 🙋‍♂️ About Me
 
-I'm a passionate data analyst who enjoys working on projects that leverage data to drive insights and help businesses make data-driven decisions. 
+I'm a passionate data analyst who enjoys working on projects that leverage data to drive insights and help businesses make data-driven decisions. Beyond coding, I'm an adventurer at heart who loves exploring nature and discovering new places. Whether it's hiking in the mountains or strolling through a new city, I find inspiration in the beauty of the world around me.
+
+When I'm not working on the latest tech project, you can often find me playing or watching sports. I'm a big fan of basketball and soccer!
 
 ## 📊 Projects
 
