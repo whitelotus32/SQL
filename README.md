@@ -17,6 +17,12 @@ When I'm not working on the latest tech project, you can often find me playing o
 - **Technologies Used:** SQL
 - **Link:** [Superstore Data Analysis](https://github.com/whitelotus32/SQL/blob/main/Superstore)
 
+### 📈 Project 2: Fortune 500 Analysis
+- **Description:** An analysis of Fortune Companies dataset aimed at uncovering insights into various aspects of companies such as revenue, employee benefits, industry-specific practices, and workforce characteristics.
+- **Objective:** This project aims to analyze the Fortune Companies dataset to gain insights into revenue distribution, employee benefits, industry-specific practices, and workforce characteristics among Fortune Companies.
+- **Technologies Used:** SQL
+- **Link:** [Fortune 500 Analysis](https://github.com/whitelotus32/SQL/blob/main/Fortune%20500%20Analysis)
+
 ## 📬 Contact
 
 - **Email:** NickDixon32@proton.me
