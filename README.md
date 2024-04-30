@@ -27,5 +27,4 @@ When I'm not working on the latest tech project, you can often find me playing o
 
 - **Email:** NickDixon32@proton.me
 - **LinkedIn:** [Connect with me](https://www.linkedin.com/in/nickdixon32/)
-- **GitHub:** [Check out my projects](https://github.com/whitelotus32)
 - **Website:** Coming Soon!
