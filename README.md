@@ -23,6 +23,12 @@ When I'm not working on the latest tech project, you can often find me playing o
 - **Technologies Used:** SQL
 - **Link:** [Fortune 500 Analysis](https://github.com/whitelotus32/SQL/blob/main/Fortune%20500%20Analysis)
 
+### 📈 Project 3: Netflix Analytics (SQL Fiddle)
+- **Description:** A project analyzing Netflix titles data including information on movies, TV shows, directors, and cast members.
+- **Objective:** The objective of this project is to perform data analysis on Netflix titles data to extract insights such as the number of movie titles, the most recent batch of additions, alphabetical listing of titles, director information for specific titles, and identification of the oldest movie in the database.
+- **Technologies Used:** SQL
+- **Link:** [Netflix Analytics (SQL Fiddle)](https://github.com/whitelotus32/SQL/blob/main/Netflix%20Analytics%20(SQL%20Fiddle))
+
 ## 📬 Contact
 
 - **Email:** NickDixon32@proton.me
