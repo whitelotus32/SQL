@@ -29,6 +29,12 @@ When I'm not working on the latest tech project, you can often find me playing o
 - **Technologies Used:** SQL
 - **Link:** [Netflix Analytics (SQL Fiddle)](https://github.com/whitelotus32/SQL/blob/main/Netflix%20Analytics%20(SQL%20Fiddle))
 
+  ### 📈 Project 4: Customer & Order Analytics
+- **Description:** This project involves querying a database with multiple tables to quantify statistics about customer and order data.
+- **Objective:** The objective of this project is to analyze customer and order data to answer various questions regarding orders, products, and customer behavior.
+- **Technologies Used:** SQL
+- **Link:** [Customer & Order Analytics](https://github.com/whitelotus32/SQL/blob/main/Customer%20%26%20Order%20Analytics)
+
 ## 📬 Contact
 
 - **Email:** NickDixon32@proton.me
