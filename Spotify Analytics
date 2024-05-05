@@ -1,0 +1,84 @@
+# Spotify Analytics
+
+## Description
+This project analyzes Spotify data to gain insights into various aspects of music tracks, including artist popularity, danceability, instrumentalness, tempo, and speechiness.
+
+## Objective
+The objective of this project is to extract meaningful insights from the Spotify dataset, uncovering patterns and trends in music attributes and artist popularity.
+
+## Approach
+The approach involves downloading Spotify data from Kaggle, creating a table to store the data, inserting the data into the table, and then performing analytics using SQL queries including CASE statements, aggregates, filtering techniques, and logical operators, to extract insights from the Spotify dataset.
+
+## Outcome
+To provide valuable insights into music trends and artist performance on Spotify, enabling stakeholders to make informed decisions about content creation, curation, and promotion.
+
+## Tools Used
+- SQL for querying the dataset.
+
+# Creating the table: 
+CREATE TABLE BIT_DB.Spotifydata (
+id integer PRIMARY KEY,
+artist_name varchar NOT NULL,
+track_name varchar NOT NULL,
+track_id varchar NOT NULL,
+popularity integer NOT NULL,
+danceability decimal(4,3) NOT NULL,
+energy decimal(4,3) NOT NULL,
+key integer NOT NULL,
+loudness decimal(5,3) NOT NULL,
+mode integer NOT NULL,
+speechiness decimal(5,4) NOT NULL,
+acousticness decimal(6,5) NOT NULL,
+instrumentalness text NOT NULL,
+liveness decimal(5,4) NOT NULL,
+valence decimal(4,3) NOT NULL,
+tempo decimal(6,3) NOT NULL,
+duration_ms integer NOT NULL,
+time_signature integer NOT NULL 
+)
+
+# I inserted the Spotify Data .csv into the table.
+
+# Key Questions:
+
+# 1. What top 5 artists have the highest average danceability score?
+SELECT artist_name, AVG(danceability) AS avg_danceability
+FROM BIT_DB.Spotifydata
+GROUP BY artist_name
+ORDER BY avg_danceability DESC
+LIMIT 5;
+
+# 2. Who are the Top 10 artists by popularity?
+SELECT track_name, artist_name, popularity
+FROM BIT_DB.spotifydata
+ORDER BY popularity desc
+LIMIT 10;
+
+# 3. How does the average popularity differ between tracks with instrumentalness greater than 0.5 and tracks with instrumentalness less than or equal to 0.5?
+SELECT
+    CASE
+        WHEN instrumentalness > 0.005 THEN 'High Instrumentalness'
+        ELSE 'Low Instrumentalness'
+    END AS instrumentalness_category,
+    AVG(popularity) AS avg_popularity
+FROM BIT_DB.Spotifydata
+GROUP BY instrumentalness_category;
+
+# 4. What top 5 artists have the highest average tempo for tracks with a duration longer than 3 minutes (180,000 milliseconds)?
+SELECT artist_name, AVG(tempo) AS avg_tempo
+FROM BIT_DB.Spotifydata
+WHERE duration_ms > 180000
+GROUP BY artist_name
+ORDER BY avg_tempo DESC
+LIMIT 5;
+
+# 5. What is the distribution of popularity among tracks with different levels of speechiness?
+SELECT
+    CASE
+        WHEN speechiness < 0.1 THEN 'Low Speechiness'
+        WHEN speechiness < 0.5 THEN 'Medium Speechiness'
+        ELSE 'High Speechiness'
+    END AS speechiness_category,
+    COUNT(*) AS track_count
+FROM BIT_DB.Spotifydata
+GROUP BY speechiness_category;
