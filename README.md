@@ -35,6 +35,12 @@ When I'm not working on the latest tech project, you can often find me playing o
 - **Technologies Used:** SQL
 - **Link:** [Customer & Order Analytics](https://github.com/whitelotus32/SQL/blob/main/Customer%20%26%20Order%20Analytics)
 
+### 📈 Project 5: Spotify Analytics
+- **Description:** This project involves analyzing Spotify data using SQL queries to derive insights into music trends and artist performance.
+- **Objective:** The objective is to explore the Spotify dataset, identify trends in music attributes, and analyze artist performance based on various metrics.
+- **Technologies Used:** SQL
+- **Link:** [Spotify Analytics](https://github.com/whitelotus32/SQL/blob/main/Spotify%20Analytics)
+
 ## 📬 Contact
 
 - **Email:** NickDixon32@proton.me
