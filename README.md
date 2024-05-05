@@ -41,6 +41,14 @@ When I'm not working on the latest tech project, you can often find me playing o
 - **Technologies Used:** SQL
 - **Link:** [Spotify Analytics](https://github.com/whitelotus32/SQL/blob/main/Spotify%20Analytics)
 
+### 📈 Final SQL Project
+- **Description:** This project involves analyzing a Chinook database to extract meaningful insights about customers, sales agents, invoices, and tracks.
+- **Objective:** The objective of this project is to gain insights into customer behavior, sales performance, and track popularity using SQL queries on the Chinook database.
+- **Approach:** In this project, SQL techniques such as JOINs, WHERE clauses, aggregate functions (e.g., COUNT, SUM), DISTINCT keyword, and ORDER BY clause to extract meaningful insights from the Chinook database.
+- **Technologies Used:** SQL, Chinook Database
+- **Outcome:** Through SQL queries, various insights were gained, including customer demographics, sales agent performance, invoice analysis, and track popularity. Insights such as customer distribution by country, total sales for specific periods, and top-performing sales agents were obtained.
+- **Link:** [Final SQL Project](https://github.com/whitelotus32/SQL/blob/main/Final%20SQL%20Project)
+
 ## 📬 Contact
 
 - **Email:** NickDixon32@proton.me
